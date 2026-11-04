@@ -1,0 +1,10 @@
+wwwroot\empleados.html
+wwwroot\index.html
+wwwroot\js\app.js
+wwwroot\js\auth.js
+wwwroot\js\config.js
+wwwroot\js\docente.js
+wwwroot\js\login.js
+wwwroot\login.html
+wwwroot\css\styles.css
+wwwroot\docente.html

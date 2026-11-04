@@ -1,0 +1,170 @@
+
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#172554">
+    <title>Panel principal | Gestor de Horarios</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="gh-dashboard-page">
+
+    <aside class="gh-sidebar">
+        <a href="index.html" class="gh-sidebar__brand">
+            <span class="gh-sidebar__mark">GH</span>
+            <span>
+                <strong>Gestor de Horarios</strong>
+                <small>Tecnologías de la Información</small>
+            </span>
+        </a>
+
+        <div class="gh-sidebar__section">MENÚ PRINCIPAL</div>
+
+        <nav class="gh-nav">
+            <a href="index.html" class="gh-nav__link active">
+                <span>▦</span> Panel principal
+            </a>
+            <a href="docente.html" class="gh-nav__link">
+                <span>♙</span> Docentes
+            </a>
+            <a href="#" class="gh-nav__link gh-nav__disabled" aria-disabled="true">
+                <span>▤</span> Grupos
+                <small>Próximamente</small>
+            </a>
+            <a href="#" class="gh-nav__link gh-nav__disabled" aria-disabled="true">
+                <span>▦</span> Materias
+                <small>Próximamente</small>
+            </a>
+            <a href="#" class="gh-nav__link gh-nav__disabled" aria-disabled="true">
+                <span>◷</span> Horarios
+                <small>Próximamente</small>
+            </a>
+            <a href="empleados.html" class="gh-nav__link">
+                <span>♧</span> Empleados
+            </a>
+        </nav>
+
+        <div class="gh-sidebar__bottom">
+            <div class="gh-sidebar__user">
+                <div class="gh-avatar">GH</div>
+                <div>
+                    <strong id="usuarioNombre">Usuario</strong>
+                    <small>Administrador</small>
+                </div>
+            </div>
+            <button class="gh-logout" onclick="cerrarSesion()">
+                ↪ Cerrar sesión
+            </button>
+        </div>
+    </aside>
+
+    <main class="gh-dashboard">
+        <header class="gh-topbar">
+            <div>
+                <span class="gh-eyebrow">GESTIÓN ACADÉMICA</span>
+                <h1>Panel principal</h1>
+            </div>
+            <div class="gh-topbar__profile">
+                <div class="gh-avatar gh-avatar--light">GH</div>
+                <span id="usuarioNombreTop">Usuario</span>
+            </div>
+        </header>
+
+        <section class="gh-welcome">
+            <div>
+                <span class="gh-welcome__tag">GESTOR DE HORARIOS</span>
+                <h2>¡Bienvenido, <span id="usuarioBienvenida">usuario</span>!</h2>
+                <p>Administra la información académica y organiza los horarios desde un solo lugar.</p>
+            </div>
+            <div class="gh-welcome__icon">▦</div>
+        </section>
+
+        <section class="gh-section">
+            <div class="gh-section__heading">
+                <div>
+                    <h2>Resumen del sistema</h2>
+                    <p>Acceso rápido a las principales áreas de gestión.</p>
+                </div>
+            </div>
+
+            <div class="gh-dashboard__cards">
+                <a href="docente.html" class="gh-stat-card">
+                    <div class="gh-stat-card__icon blue">♙</div>
+                    <span>Gestión académica</span>
+                    <strong>Docentes</strong>
+                    <small>Consultar y administrar docentes</small>
+                    <b>Ir al módulo →</b>
+                </a>
+
+                <a href="empleados.html" class="gh-stat-card">
+                    <div class="gh-stat-card__icon teal">♧</div>
+                    <span>Administración</span>
+                    <strong>Empleados</strong>
+                    <small>Consultar y administrar empleados</small>
+                    <b>Ir al módulo →</b>
+                </a>
+
+                <div class="gh-stat-card gh-stat-card--pending">
+                    <div class="gh-stat-card__icon violet">▤</div>
+                    <span>Gestión académica</span>
+                    <strong>Grupos</strong>
+                    <small>Administración de grupos académicos</small>
+                    <b>Próximamente</b>
+                </div>
+
+                <div class="gh-stat-card gh-stat-card--pending">
+                    <div class="gh-stat-card__icon orange">◷</div>
+                    <span>Organización</span>
+                    <strong>Horarios</strong>
+                    <small>Consulta y asignación de horarios</small>
+                    <b>Próximamente</b>
+                </div>
+            </div>
+        </section>
+
+        <section class="gh-bottom-grid">
+            <div class="gh-info-card">
+                <div class="gh-info-card__heading">
+                    <h2>Estado del proyecto</h2>
+                    <span class="gh-status">En desarrollo</span>
+                </div>
+                <p>El sistema se encuentra en construcción. Los módulos se habilitarán conforme avance su implementación.</p>
+                <div class="gh-progress">
+                    <span></span>
+                </div>
+                <small>Gestor de Horarios · UTTT</small>
+            </div>
+
+            <div class="gh-info-card gh-info-card--blue">
+                <div class="gh-info-card__heading">
+                    <h2>Acceso rápido</h2>
+                </div>
+                <p>Continúa administrando la información del personal docente.</p>
+                <a href="docente.html" class="gh-quick-link">Administrar docentes <span>→</span></a>
+            </div>
+        </section>
+
+        <footer class="gh-footer">
+            Gestor de Horarios · Tecnologías de la Información
+        </footer>
+    </main>
+
+    <script src="js/auth.js"></script>
+    <script>
+                protegerPagina();
+                const usuario = obtenerUsuario();
+
+                if (usuario) {
+                    mostrarUsuario("usuarioNombre");
+                    mostrarUsuario("usuarioNombreTop");
+                    mostrarUsuario("usuarioBienvenida");
+                }
+    </script>
+</body>
+</html>
